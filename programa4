@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <conio.h>
+int main ()
+{
+	int a=5,c=7; 
+	int b=5,d=7,e;
+	int matriz[5][5], i, j, vector[5]={0,0,0,0,0}, vector2[5]={0,0,0,0,0};
+	int matriz2[7][7], f, o, vector3[7]={0,0,0,0,0,0,0}, vector4[7]={0,0,0,0,0,0,0};
+	printf("indica la operación que quiere realizar\n 1) matriz 5x5 2)matriz 7x7  \n");
+     scanf("%d",&e);
+    switch(e) 
+	 {
+	 	case 1:	
+	        	for (i=0; i<a; i++)
+	            for(j=0; j<b; j++) 
+	 {
+	 	printf("indica el valor de la posicion %d, %d: ",i,j);
+	 	scanf("%d", &matriz[i][j]);
+	 	vector[i]=vector[i]+matriz[i][j];
+	 	vector2[j]=vector2[j]+matriz[i][j];
+	 }
+			{
+	        printf("La matriz que insertaste es: \n\n");
+	         for (i=0; i<a; i++){
+	         for (j=0; j<b; j++) {
+	         printf("%d \t",matriz[i][j]);
+		 }
+		 printf("\n");
+	}
+}
+	 printf ("los valores de la diagonal principal son; %d, %d, %d, %d, %d",matriz[0][0],matriz[1][1],matriz[2][2],matriz[3][3],matriz[4][4]);
+	 break;
+	case 2: 
+	            for(f=0; f<c; f++)
+	            for(o=0; o<d; o++) 
+	 {
+	 	printf("indica el valor de la posicion %d, %d: ",f,o);
+	 	scanf("%d", &matriz2[f][o]);
+	 	vector3[f]=vector3[f]+matriz2[f][o];
+	 	vector4[o]=vector4[o]+matriz2[f][o];
+	 }
+			{
+	        printf("La matriz que insertaste es: \n\n");
+	         for (f=0; f<d; f++) {
+	         	for(o=0; o<d; o++){
+	         printf("%d \t",matriz2[f][o]);
+		 }
+		 printf("\n");
+	}
+}
+	 printf ("los valores de la diagonal principal son; %d, %d, %d, %d, %d, %d, %d",matriz2[0][0],matriz2[1][1],matriz2[2][2],matriz2[3][3],matriz2[4][4],matriz2[5][5],matriz2[6][6]);
+	 break;
+}
+}
